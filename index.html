@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Freelancer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="">
-    
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="styles\styles.css" />
+    <link rel="stylesheet" href="styles\nav.css" />
+    <link rel="stylesheet" href="styles\hero.css" />
+    <link rel="stylesheet" href="styles\stats.css" />
+  </head>
+  <body>
+    <header>
+      <section class="navbar">
+        <nav>
+          <a href="#home" class="logo">Freelancer</a>
+
+          <button
+            class="togglebtn"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="navlinks-list"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <ul class="navlinks" id="navlinks-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#register">Register</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="hero" id="home">
+        <div class="hero-text">
+          <h1>
+            Hy! I Am<br />
+            Shamima Akhi
+          </h1>
+          <p>
+            Service Line helps you to turn your complex multisite, multivendor
+            imaging environment into a uniform and balanced operation.
+          </p>
+
+          <button id="hero-btn"><p>Get Started</p></button>
+        </div>
+
+        <span id="hero-img"><img src="./images/Rectangle 674.png" /></span>
+      </section>
+    </header>
+
+    <article class="white-stats-section" id="reviews">
+      <div class="stats-container">
+        <h2 class="stat-number">258+</h2>
+        <p class="stat-label">Positive Feedback</p>
+        <p class="stat-description">From our clients</p>
+      </div>
+      <div class="stats-container" id="feedback">
+        <h2 class="stat-number">590k</h2>
+        <p class="stat-label">Positive Feedback</p>
+        <p class="stat-description">From our clients</p>
+      </div>
+      <div class="stats-container" id="experience">
+        <h2 class="stat-number">28+</h2>
+        <p class="stat-label">Years of experience</p>
+        <p class="stat-description">High quality</p>
+      </div>
+    </article>
+
+    <script src="script.js"></script>
+  </body>
 </html>
