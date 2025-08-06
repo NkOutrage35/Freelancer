@@ -1,0 +1,146 @@
+.pricing {
+  justify-content: center;
+  padding: 10%;
+}
+
+#pricing-headingtext {
+  text-align: center;
+  color: var(--color-white);
+  margin-bottom: 71px;
+}
+
+#pricing-headingtext h1 {
+  text-align: center;
+  font-size: 3.2rem;
+  color: var(--color-white);
+  margin-top: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Pricing Cards Container Grid */
+.pricing-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background-color: #1a1e26;
+  border: 1px solid #333842;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  color: black;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for Premium card */
+.pricing-card#premium {
+  border: 2px solid #ff69b4;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+}
+
+/* Card Header and Price */
+.pricing-card h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pricing-card .price {
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.pricing-card .price span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: black;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+/* List Styling */
+.pricing-card .list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.pricing-card .list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pricing-card .list li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/Group4.png");
+  background-size: contain; /* Scales the image to fit without being cut off */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+
+/* Button Styling */
+.pricing-card .button {
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: 2px solid #030000;
+  color: black;
+}
+
+.pricing-card .button.basic {
+  border-color: black;
+  color: black;
+}
+
+.pricing-card .button.premium {
+  background-color: var(--color-accent-pink);
+  border-color: var(--color-accent-pink);
+  color: #ffffff;
+}
+
+.pricing-card .button.premium:hover {
+  background-color: #ff8ab6;
+}
+
+@media screen and (max-width: 768px) {
+  .pricing-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  #pricing-headingtext h1 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .pricing-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #pricing-headingtext h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}

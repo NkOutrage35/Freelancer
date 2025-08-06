@@ -1,5 +1,6 @@
 /* --- Stats Section Styles --- */
 .white-stats-section {
+  background-color: var(--color-white);
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
