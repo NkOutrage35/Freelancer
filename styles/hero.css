@@ -6,7 +6,7 @@
 }
 
 .hero h1 {
-  font-size: 2.8rem; /* Slightly increase font size */
+  font-size: 2.8rem;
   color: var(--color-hero-heading);
   margin-bottom: 1rem;
   margin-top: 0;
@@ -14,11 +14,11 @@
 }
 
 .hero p {
-  font-size: 1.1rem; /* Adjust paragraph font size */
+  font-size: 1.1rem;
   color: var(--color-hero-paragraph);
   margin-top: 0;
   margin-bottom: 2rem;
-  max-width: 500px; /* Limit paragraph width for readability */
+  max-width: 500px;
 }
 
 .hero-text {
@@ -29,12 +29,12 @@
 
 #hero-btn {
   background-color: var(--color-accent-pink);
-  padding: 14px 28px; /* Adjust button padding */
+  padding: 0.875rem 1.75rem; 
   border: none;
-  border-radius: 25px;
+  border-radius:1.563rem;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
   display: inline-block;
 }
 
@@ -45,18 +45,18 @@
 
 #hero-img {
   display: flex;
-  justify-content: flex-end; /* Align image to the right */
+  justify-content: flex-end;
   flex-shrink: 0;
-  max-width: 45%; /* Adjust image width */
+  max-width: 45%;
   height: auto;
-  margin-left: 0; /* Remove previous margin */
+  margin-left: 0;
   margin-top: 0;
 }
 
 #hero-img img {
   max-width: 100%;
   height: auto;
-  display: block; /* Prevent extra space below image */
+  display: block;
 }
 
 /* Responsive mobile styles */
@@ -64,7 +64,7 @@
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 80px 30px;
+    padding: 5rem 1.875rem;
   }
 
   .hero-text {

@@ -1,7 +1,7 @@
 main {
   background-color: var(--primary-color-dark);
   color: var(--color-white);
-  padding: 7%; /* Adjusted general padding for the main section: top/bottom and left/right */
+  padding: 7%;
 }
 
 /* --- benefits-header and description layout --- */
@@ -10,7 +10,7 @@ main {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 4rem;
-  padding: 0 1rem; /* Add some horizontal padding to this section */
+  padding: 0 1rem;
 }
 
 .benefits-header {
@@ -18,12 +18,11 @@ main {
   display: flex;
   flex-direction: column;
   flex: 2;
-  padding-right: 2rem; /* Adjusted space between header and description */
-  padding-left: 0; /* Removed negative padding */
+  padding-right: 2rem;
+  padding-left: 0;
 }
 
 #benefits-subtitle {
-  font-family: "Raleway", sans-serif;
   font-weight: 500;
   margin-bottom: 0.5rem;
   font-size: 1rem;
@@ -74,7 +73,7 @@ main {
 .benefit-icon {
   margin-right: 1rem;
   flex-shrink: 0;
-  padding-top: 5px;
+  padding-top: 0.313rem;
 }
 
 .benefit-text-content {
@@ -89,7 +88,6 @@ main {
 }
 
 .benefit-description {
-  font-family: "DM Sans", sans-serif;
   text-align: left;
   margin-top: 0.5rem;
 }
@@ -104,7 +102,7 @@ main {
     flex-direction: column;
     text-align: center;
     margin-bottom: 2rem;
-    padding: 0; /* Remove horizontal padding on mobile */
+    padding: 0;
   }
 
   .benefits-header {
@@ -115,11 +113,13 @@ main {
 
   .benefits-header h1 {
     font-size: 2rem;
+    padding-top: 1rem;
   }
 
   #benefits-description {
     text-align: center;
     max-width: 100%;
+    margin-top: 1.5rem;
   }
 
   .benefits-section {
@@ -127,17 +127,12 @@ main {
     align-items: center;
   }
 
-  .benefit-container {
-    flex-basis: 100%;
-    max-width: 90%;
+  .benefit-container:not(:first-child) {
     border-left: none;
-    border-top: 3px solid #d8d8d8;
+    border-radius: 0;
+    border-top: 3px solid var(--color-white);
     padding-left: 1rem;
     padding-top: 2rem;
-  }
-
-  .benefit-container:first-child {
-    border-top: none;
   }
 
   .benefit-icon {
@@ -153,23 +148,22 @@ main {
 
 .service-card-header {
   text-align: center;
-  margin-bottom: 4rem; /* Space below the header */
-  /* Ensure these styles apply to the header text, not the container */
+  margin-bottom: 4rem;
 }
 
 .service-card-header .service-card-title {
   font-size: 2.5rem;
   line-height: 1.2;
   margin-top: 0;
-  margin-bottom: 1rem; /* Space below the main title */
-  color: var(--color-white); /* Ensure title color is white */
+  margin-bottom: 1rem;
+  color: var(--color-white);
 }
 
 .service-card-header .service-card-headingtext {
   font-size: 1.1rem;
-  color: var(--color-white); /* Lighter color for sub-heading */
-  max-width: 600px; /* Limit width for readability */
-  margin: 0 auto; /* Center the sub-heading */
+  color: var(--color-white);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Grid Container for Service Cards */
@@ -183,14 +177,13 @@ main {
   margin-left: -6rem;
 }
 
-
 /* Service Card Styles (individual cards) */
 .service-card {
   display: flex;
   align-items: flex-start;
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   width: 550px;
   padding: 4rem 3.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -205,12 +198,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 .service-icon {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   fill: #ffffff;
   color: #ffffff;
 }
@@ -226,7 +219,7 @@ main {
   font-weight: 700;
   color: #070707;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 1.25rem;
 }
 
 .service-description {
@@ -241,45 +234,45 @@ main {
 /* Responsive Adjustments */
 @media (max-width: 992px) {
   .services-grid-container {
-    grid-template-columns: 1fr; /* Single column on tablets */
+    grid-template-columns: 1fr;
     gap: 20px;
-    margin-left: 0; /* Remove the problematic negative margin */
-    padding: 0 1rem; /* Add padding to prevent content from touching the edges */
+    margin-left: 0;
+    padding: 0 1rem;
   }
 
   .service-card {
-    flex-direction: row; /* Keep the original row layout */
+    flex-direction: row;
     align-items: center;
     padding: 2rem;
-    max-width: 600px; /* Limit the width for better readability */
-    width: 100%; /* Ensures the card is responsive */
+    max-width: 600px;
+    width: 100%;
   }
 
   .service-icon-wrapper {
-    margin-right: 20px; /* Maintain the space between icon and text */
+    margin-right: 1.25rem;
     margin-bottom: 0;
   }
 }
 
 @media (max-width: 768px) {
   .services-grid-container {
-    grid-template-columns: 1fr; /* Ensures a single column layout */
+    grid-template-columns: 1fr;
     gap: 20px;
-    margin-left: 0; /* Remove the problematic negative margin */
-    padding: 0 1rem; /* Add padding to prevent content from touching the edges */
+    margin-left: 0;
+    padding: 0 1rem;
   }
 
   .service-card {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 100%; /* Make the card responsive by taking up the full width */
-    max-width: 350px; /* Optional: Set a max-width for better readability on slightly larger phones */
-    margin-left: 0; /* Remove the problematic margin */
+    width: 100%;
+    max-width: 350px;
+    margin-left: 0;
   }
 
   .service-icon-wrapper {
-    margin-bottom: 15px;
+    margin-bottom: 0.938rem;
     margin-right: 0;
   }
 

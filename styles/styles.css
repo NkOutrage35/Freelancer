@@ -23,8 +23,8 @@ body {
 
 section {
   background-color: var(--primary-color-dark);
-  padding-left: 141px;
-  padding-right: 180px;
+  padding-left: 8.813rem;
+  padding-right: 11.25rem;
 }
 
 /* --- Responsive Mobile Styles --- */
