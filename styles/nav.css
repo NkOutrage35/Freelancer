@@ -4,15 +4,15 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 3rem 0 3rem;
-  padding-right: 4.375rem;
   color: var(--color-hero-paragraph);
   position: relative;
 }
 
 .logo {
   color: var(--color-white);
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
+  margin-top: 1rem;
   text-decoration: none;
   z-index: 100;
 }
@@ -34,11 +34,23 @@ nav {
   font-weight: 500;
   font-family: "Raleway", sans-serif;
   transition: color 0.3s ease;
+  position: relative;
 }
 
 .navlinks a:hover,
 .navlinks a:focus {
   color: var(--color-accent-pink);
+}
+
+#register-btn {
+  background-color: var(--primary-color-dark);
+  border: 2px solid white;
+  border-radius: 2rem;
+  padding: 0.55rem 2rem;
+}
+
+.link {
+  padding-top: 0.7rem;
 }
 
 .togglebtn {
@@ -63,7 +75,8 @@ nav {
 /* --- Responsive Mobile Styles --- */
 @media (max-width: 768px) {
   nav {
-    padding-right: 1rem;
+    padding-right: 0;
+    height: 80%;
   }
 
   .togglebtn {
@@ -110,5 +123,13 @@ nav {
 
   .togglebtn.show span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .pushdown.pushed-down .hero{
+    transform: translateY(100vh);
+  }
+
+  .hero {
+    transition: transform 0.5s ease-in;
   }
 }

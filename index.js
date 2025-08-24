@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.querySelector('.togglebtn');
     const navLinks = document.querySelector('.navlinks');
+    const navsection = document.querySelector('.pushdown');
     
     if (toggleButton && navLinks) {
         toggleButton.addEventListener('click', () => {
-            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
-            toggleButton.setAttribute('aria-expanded', !isExpanded);
             
             navLinks.classList.toggle('show');
             toggleButton.classList.toggle('show');
+            navsection.classList.toggle('pushed-down');
         });
 
         // Close menu when a navigation link is clicked
@@ -16,8 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('show');
                 toggleButton.classList.remove('show');
-                toggleButton.setAttribute('aria-expanded', 'false');
+                navsection.classList.remove('pushed-down');
             });
         });
     }
-});
+})
+;

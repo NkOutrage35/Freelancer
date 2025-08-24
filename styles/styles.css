@@ -23,14 +23,12 @@ body {
 
 section {
   background-color: var(--primary-color-dark);
-  padding-left: 8.813rem;
-  padding-right: 11.25rem;
+  padding: 0 8.813rem;
 }
 
 /* --- Responsive Mobile Styles --- */
 @media (max-width: 768px) {
   section {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0 1.5rem;
   }
 }

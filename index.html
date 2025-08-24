@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="styles/nav.css" />
     <link rel="stylesheet" href="styles/hero.css" />
     <link rel="stylesheet" href="styles/stats.css" />
+    <link rel="stylesheet" href="styles/benefits.css" />
     <link rel="stylesheet" href="styles/services.css" />
     <link rel="stylesheet" href="styles/my-work.css" />
     <link rel="stylesheet" href="styles/pricing-cards.css" />
@@ -19,28 +21,23 @@
     <link rel="stylesheet" href="styles/footer.css" />
   </head>
   <body>
-    <header>
+    <header class="pushdown">
       <section class="navbar">
         <nav>
           <a href="#home" class="logo">Freelancer</a>
 
-          <button
-            class="togglebtn"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
-            aria-controls="navlinks-list"
-          >
+          <button class="togglebtn">
             <span></span>
             <span></span>
             <span></span>
           </button>
 
           <ul class="navlinks" id="navlinks-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#register">Register</a></li>
+            <li class="link"><a href="#home">Home</a></li>
+            <li class="link"><a href="#about">About</a></li>
+            <li class="link"><a href="#services">Services</a></li>
+            <li class="link"><a href="#reviews">Reviews</a></li>
+            <li id="register-btn"><a href="#register">Register</a></li>
           </ul>
         </nav>
       </section>
@@ -288,10 +285,7 @@
     <section class="pricing">
       <div id="pricing-headingtext">
         <p>Our Pricing</p>
-        <h1>
-          available prices and cheap<br />
-          packages
-        </h1>
+        <h1>available prices and cheap packages</h1>
       </div>
 
       <div class="pricing-cards-container">
@@ -303,7 +297,9 @@
             <li>Get Free drinks and snacks</li>
             <li>Free parking for 1 month</li>
           </ul>
-          <a href="#" class="button basic">Get Started</a>
+          <div class="price-btn">
+            <button class="button basic">Get Started</button>
+          </div>
         </div>
 
         <div class="pricing-card" id="premium">
@@ -315,7 +311,9 @@
             <li>Free parking for 1 month</li>
             <li>private workout in a special room</li>
           </ul>
-          <a href="#" class="button premium">Get Started</a>
+          <div class="price-btn">
+            <button class="button premium">Get Started</button>
+          </div>
         </div>
 
         <div class="pricing-card">
@@ -328,7 +326,9 @@
             <li>Private workout in a special room</li>
             <li>Access to the Fitness community</li>
           </ul>
-          <a href="#" class="button basic">Get Started</a>
+          <div class="price-btn">
+            <button class="button basic">Get Started</button>
+          </div>
         </div>
       </div>
     </section>
@@ -349,6 +349,12 @@
             Design of range per charge for an affordable price <br />is how we
             define but passion and persistence
           </p>
+          <div class="socials">
+            <img src="images\Facebook.svg" />
+            <img src="images\Instagram.svg" />
+            <img src="images\Twitter.svg" />
+            <img src="images\Youtube.svg" />
+          </div>
         </div>
 
         <div class="footer-content">
@@ -377,15 +383,21 @@
             <li><p>Search Inventory</p></li>
           </ul>
         </div>
-      </div>
-      <div class="socials">
-        <img src="images\Facebook.svg" />
-        <img src="images\Instagram.svg" />
-        <img src="images\Twitter.svg" />
-        <img src="images\Youtube.svg" />
+
+        <div class="footer-content">
+          <p class="footer-text-heading">Help Center</p>
+          <ul class="footer-text">
+            <li><p>Payment Services</p></li>
+            <li><p>FAQ Community</p></li>
+            <li><p>Terms Condition</p></li>
+          </ul>
+        </div>
       </div>
 
-      <p id="lower-footer">Copyright Cartrix 2021 All Right Reserved</p>
+      <p id="lower-footer">
+        <br class="hide-on-mobile" /><br />Copyright Cartrix 2021 All Right
+        Reserved
+      </p>
     </footer>
 
     <script src="index.js"></script>

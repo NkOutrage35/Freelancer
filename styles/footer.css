@@ -2,8 +2,6 @@ footer {
   background-color: var(--secondary-color-dark);
   font-family: Ubuntu;
   color: var(--color-hero-heading);
-  margin-top: 1rem;
-  margin-left: 1.5rem;
   position: relative;
   padding: 4rem 5%;
 }
@@ -36,8 +34,8 @@ footer {
 .socials {
   gap: 1rem;
   align-items: center;
-  border-bottom: 1px solid #c4c4c480;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .socials img {
@@ -49,14 +47,16 @@ footer {
   color: #c4c4c480;
   font-size: 1.2rem;
   text-align: center;
-  margin-top: 2rem;
+  border-top: 1px solid #c4c4c480;
+  margin-top: 3rem;
 }
 
 @media screen and (max-width: 768px) {
   footer {
-    width: 85%;
-    padding-top: 2rem;
+    width: 100%;
+    padding: 0%;
     padding-bottom: 1rem;
+    padding-left: 0.5rem;
   }
   footer p {
     font-size: small;
@@ -68,7 +68,7 @@ footer {
   }
 
   .footer-content h1 {
-    text-align: center;
+    margin-top: 2.5rem;
   }
 
   .socials {
@@ -79,5 +79,9 @@ footer {
   #lower-footer {
     font-size: 1rem;
     margin-top: 1rem;
+  }
+
+  .hide-on-mobile {
+    display: none;
   }
 }

@@ -1,0 +1,145 @@
+main {
+  background-color: var(--primary-color-dark);
+  color: var(--color-white);
+  padding: 7%;
+}
+
+/* --- benefits-header and description layout --- */
+.benefits-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  margin-top: -1rem;
+  padding: 0 1rem;
+}
+
+.benefits-header {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+#benefits-subtitle {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.benefits-header h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+#benefits-description {
+  font-family: "DM Sans", sans-serif;
+  text-align: left;
+  flex: 1;
+  margin-top: 7rem;
+  font-size: 1rem;
+  max-width: 400px;
+}
+
+/* --- Benefits Section (Individual Items) --- */
+.benefits-section {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0 10rem;
+  margin: 0;
+}
+
+.benefit-container {
+  display: flex;
+  align-items: flex-start;
+  flex-basis: 30%;
+  padding: 2rem 1rem;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.benefit-container:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-container:not(:first-child) {
+  border-left: 3px solid #d8d8d8;
+  border-radius: 1px;
+  padding-left: 3rem;
+}
+
+.benefit-icon {
+  margin-right: 1rem;
+  flex-shrink: 0;
+  padding-top: 0.313rem;
+}
+
+.benefit-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit-label {
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.benefit-description {
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+/* --- Responsive Mobile Styles --- */
+@media (max-width: 768px) {
+  main {
+    padding: 5%;
+  }
+
+  .benefits-text {
+    margin-top: 2rem;
+    margin-bottom:1.25rem;
+  }
+
+  .benefits-header {
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 0rem;
+  }
+
+  .benefits-header h1 {
+    font-size: 1.5rem;
+  }
+
+  #benefits-subtitle {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  #benefits-description {
+    display: none;
+  }
+
+  .benefits-section {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0%;
+    padding-bottom: 5rem;
+  }
+
+  .benefit-container:not(:first-child) {
+    border: none;
+    border-radius: 0;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .benefit-icon {
+    margin-right: 0.8rem;
+  }
+}

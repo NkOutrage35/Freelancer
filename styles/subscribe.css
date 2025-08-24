@@ -8,7 +8,7 @@
 .subscribe p {
   color: var(--color-hero-heading);
   font-size: 1rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .subscribe h1 {
@@ -24,13 +24,21 @@
   padding: 1.2rem 2.4rem;
   border: none;
   border-radius: 3.125rem;
+  margin-bottom: 0.6rem;
   font-size: 1.2rem;
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
+  .subscribe {
+    padding: 1rem;
+    padding-top: 0.5rem;
+    text-align: center;
+  }
+
   .subscribe h1 {
-    font-size: 2.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.3rem;
   }
 
   .subscribe p {
@@ -38,12 +46,17 @@
   }
 
   .subscribe button {
-    padding: 1rem 2rem;
     font-size: 1rem;
+    margin-bottom: 1.3rem;
   }
 }
 
-@media (minwidth: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+  .subscribe {
+    /* Ensure consistent horizontal padding on tablets as well */
+    padding: 1.25rem 1.5rem;
+  }
+
   .subscribe h1 {
     font-size: 3rem;
   }
@@ -56,5 +69,4 @@
     padding: 1.1rem 2.2rem;
     font-size: 1.1rem;
   }
-  
 }
