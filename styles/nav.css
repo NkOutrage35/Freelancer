@@ -85,7 +85,7 @@ nav {
 
   .navlinks {
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     background-color: var(--primary-color-dark);
     top: 0;
     right: 0;
@@ -125,11 +125,11 @@ nav {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .pushdown.pushed-down .hero{
+  .overlay.pushed-down {
     transform: translateY(100vh);
   }
 
-  .hero {
+  .overlay {
     transition: transform 0.5s ease-in;
   }
 }

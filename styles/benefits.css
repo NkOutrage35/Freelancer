@@ -93,6 +93,59 @@ main {
   margin-top: 0.5rem;
 }
 
+/* --- Animation Styling --- */
+@keyframes benefits-header-animation {
+  from {
+    filter: blur(0.85rem);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.benefits-header {
+  animation: benefits-header-animation linear;
+  animation-timeline: view();
+  animation-range: 10% 50%;
+  animation-fill-mode: backwards;
+}
+
+@keyframes benefits-section-animation {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.benefits-text h1,
+.benefits-text p,
+.benefits-section h4,
+.benefits-section p,
+.benefit-icon {
+  animation: benefits-section-animation linear;
+  animation-timeline: view();
+  animation-range: 10% 50%;
+  animation-fill-mode: backwards;
+}
+
+.benefits-text h1,
+.benefits-section h4,
+.benefit-icon {
+  animation-delay: 0.5s;
+}
+
+.benefits-text p,
+.benefits-section p {
+  animation-delay: 0.3s;
+}
+
 /* --- Responsive Mobile Styles --- */
 @media (max-width: 768px) {
   main {
@@ -101,7 +154,7 @@ main {
 
   .benefits-text {
     margin-top: 2rem;
-    margin-bottom:1.25rem;
+    margin-bottom: 1.25rem;
   }
 
   .benefits-header {
@@ -142,4 +195,11 @@ main {
   .benefit-icon {
     margin-right: 0.8rem;
   }
+
+  .benefits-header {
+  animation: benefits-header-animation linear;
+  animation-timeline: view();
+  animation-range: 5% 35%;
+  animation-fill-mode: backwards;
+}
 }
