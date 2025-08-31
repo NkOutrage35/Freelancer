@@ -141,7 +141,7 @@
 .pricing {
   animation: price-card-fadein linear;
   animation-timeline: view();
-  animation-range: 10% 50%;
+  animation-range: 15% 40%;
   animation-fill-mode: backwards;
 }
 
