@@ -1,0 +1,190 @@
+.pricing {
+  justify-content: center;
+  padding: 5% 10% 10% 11%;
+}
+
+#pricing-headingtext {
+  text-align: center;
+  color: var(--color-white);
+  margin-bottom: 4.438rem;
+}
+
+#pricing-headingtext h1 {
+  text-align: center;
+  font-size: 3.2rem;
+  color: var(--color-white);
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Pricing Cards Container Grid */
+.pricing-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background-color: #1a1e26;
+  border: 1px solid #333842;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  color: black;
+  padding: 3.75rem 1.25rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for Premium card */
+.pricing-card#premium {
+  border: 2px solid #ff69b4;
+  box-shadow: 0 0 1.25rem rgba(255, 105, 180, 0.4);
+}
+
+/* Card Header and Price */
+.pricing-card h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+}
+
+.pricing-card .price {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  align-items: flex-end;
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
+
+.pricing-card .price span {
+  font-size: 1.35rem;
+  font-weight: normal;
+  color: black;
+  margin-left: 0.313rem;
+  margin-bottom: 0.313rem;
+}
+
+/* List Styling */
+.pricing-card .list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.pricing-card .list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.625rem;
+}
+
+.pricing-card .list li::before {
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("../images/Group4.png");
+  background-size: contain; /* Lets image to fit */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 0.625rem;
+}
+
+/* Button Styling */
+.pricing-card .button {
+  width: 50%;
+  margin-left: 5rem;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 3.125rem;
+  font-weight: bold;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  border: 2px solid #030000;
+  color: black;
+}
+
+.pricing-card .button.basic {
+  border-color: black;
+  color: black;
+}
+
+.pricing-card .button.premium {
+  background-color: var(--color-accent-pink);
+  border-color: var(--color-accent-pink);
+  color: #ffffff;
+}
+
+.pricing-card .button.premium:hover {
+  background-color: #ff8ab6;
+}
+
+@keyframes price-card-fadein {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pricing {
+  animation: price-card-fadein linear;
+  animation-timeline: view();
+  animation-range: 15% 40%;
+  animation-fill-mode: backwards;
+}
+
+@media screen and (max-width: 768px) {
+  .pricing-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  #pricing-headingtext h1 {
+    text-align: center;
+    font-size: 1.05rem;
+    margin-top: 0;
+  }
+  #pricing-headingtext p {
+    margin-bottom: 0.5rem;
+  }
+
+  #pricing-headingtext {
+    padding-top: 4.5rem;
+    margin-bottom: 1.755rem;
+  }
+  .pricing-card .button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  .pricing {
+    animation: price-card-fadein linear;
+    animation-timeline: view();
+    animation-range: 5% 40%;
+    animation-fill-mode: backwards;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .pricing-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #pricing-headingtext h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}

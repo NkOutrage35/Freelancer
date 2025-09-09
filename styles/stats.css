@@ -1,0 +1,56 @@
+/* --- Stats Section Styles --- */
+.white-stats-section {
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 0 0 1rem 0;
+  margin: 0;
+}
+
+.stats-container {
+  flex: 1;
+  padding: 2rem 0;
+  position: relative;
+  height: 100%;
+}
+
+.stats-container:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 50%;
+  background-color: #d8d8d8;
+  border-radius: 1px;
+}
+
+.stats-container:last-child::before {
+  width: 3px;
+}
+
+.stat-number {
+  color: #070707;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.stat-label {
+  font-weight: bold;
+}
+
+.stat-description {
+  font-family: "DM Sans", sans-serif;
+  text-align: center;
+  color: var(--color-hero-paragraph);
+}
+
+/* --- Responsive Mobile Styles --- */
+@media (max-width: 768px) {
+  .white-stats-section {
+    display: none;
+  }
+}
